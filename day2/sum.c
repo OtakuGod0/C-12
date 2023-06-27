@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-00int sum();
-in00t main(){
-    0int n1, n2, res; 
+int sum();
+int main(){
+    int n1, n2, res; 
     printf("Enter one number: ");
     scanf("%d", &n1);
     printf("Enter another number: ");
