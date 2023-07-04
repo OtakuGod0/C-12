@@ -7,9 +7,10 @@ int true(){
 int main(){
     if(true()){
         printf("Heloooo world!!!\n");
-
+        
     }
-    char x = "0";
-    
+    float a = 0.1 , b = 0.3;
+    float x = a+b;
+    printf("%.30f\n", x);
     return 0;
 }
