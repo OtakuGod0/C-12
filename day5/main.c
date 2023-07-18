@@ -1,14 +1,35 @@
 #include <stdio.h>
 
-void arrpass(int []);
+int n;
+int *sort(int []);
 
 int main(){
-    int x[5] = {1, 3, 4, 12, 2};
-    arrpass(x);
-}
-void arrpass(int x[5]){
     int i;
-    for(i=0;i<5;i++){
-        printf("%d\n", x[i]);
+    printf("Enter the size of arr: ");
+    scanf("%d", &n);
+    int x[n];
+    for(i=0;i<n;i++){
+        printf("Enter the value for %d position: ", i);
+        scanf("%d", &x[i]);
     }
+    int *sorted_arr = sort(x[n]);
+
+    for(i=0;i<n;i++){
+        printf("%d\n", sorted_arr[i]);
+    }
+
+}
+
+int *sort(int x[n]){
+    int i, j, tmp;
+    for(i=0;i<n;i++){
+        for(j=i;j<n;j++){
+            if(x[i]>x[j]){
+                tmp = x[i];
+                x[i] = x[j];
+                x[j] = tmp;
+            }
+        }
+    }
+    return x;
 }
