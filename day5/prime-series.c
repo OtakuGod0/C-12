@@ -5,17 +5,19 @@ int pcheck(int);
 int main()
 {
     //vairable declaration
-    int n, i;
+    int n, i, j=0;
 
     //taking input
     printf("Enter one number: ");
     scanf("%d", &n);
 
     //looping through n to 1 
-    for(i=n;i>=1;i--){
+    for(i=2;j<=n;i++){
         //checking if i is prime and if true printing i
-        if(pcheck(i))
+        if(pcheck(i)){
             printf("%d\n", i);
+            j++;
+        }
     }
 
     //termination

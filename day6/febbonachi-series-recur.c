@@ -7,7 +7,7 @@ int main(){
 }
 
 void series(int a, int b){
-    printf("%d\t",b);
+    printf("%d\t",a);
     if(b>100) return 0;
     else series(b, a+b);
 }
